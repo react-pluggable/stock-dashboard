@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card, Dropdown, Form, Col, Row } from "react-bootstrap";
+import { StockContext } from "../App";
 
 function Chart() {
+  const stocks = useContext(StockContext);
+
   return (
     <Col lg={8}>
       <Card>
