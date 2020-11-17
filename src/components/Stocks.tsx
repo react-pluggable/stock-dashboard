@@ -16,26 +16,19 @@ function Stocks() {
         <Card.Body>
           <Card.Title>Stocks</Card.Title>
           <Form className="my-5">
-            <InputGroup>
-              <InputGroup.Prepend>
-                <InputGroup.Text>
-                  <i
-                    className="fa fa-search"
-                    aria-hidden="true"
-                    style={{
-                      backgroundColor: "transparent",
-                      borderRight: "transparent",
-                    }}
-                  ></i>
-                </InputGroup.Text>
-              </InputGroup.Prepend>
-              <FormControl
-                className="demo"
-                id="inlineFormInputGroup"
+            <div className="position-relative">
+              <i
+                className="fa fa-search position-absolute"
+                aria-hidden="true"
+                style={{ top: "11px", left: "11px" }}
+              ></i>
+              <input
+                type="text"
                 placeholder="Search"
-                style={{ borderLeft: "transparent" }}
+                className="form-control"
+                style={{ paddingLeft: "35px" }}
               />
-            </InputGroup>
+            </div>
           </Form>
           <Card.Text>
             <ListGroup>

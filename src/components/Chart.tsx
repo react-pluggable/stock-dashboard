@@ -19,12 +19,10 @@ function Chart() {
                   <Dropdown className="ml-auto">
                     <Dropdown.Toggle>Pie Chart</Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Another action
-                      </Dropdown.Item>
+                      <Dropdown.Item href="#/action-1">Pie Chart</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Bar Chart</Dropdown.Item>
                       <Dropdown.Item href="#/action-3">
-                        Something else
+                        Line Chart
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
