@@ -16,38 +16,6 @@ function Stocks() {
         <Card.Body>
           <Card.Title>Stocks</Card.Title>
           <Form className="my-5">
-            {/* <div>
-              <i
-                className="fa fa-search"
-                aria-hidden="true"
-                style={{
-                  backgroundColor: "transparent",
-                  borderRight: "transparent",
-                }}
-              ></i>
-              <input
-                type="text"
-                placeholder="Search"
-                className="form-control"
-              ></input>
-            </div> */}
-
-            {/* <div className="ml-2 ml-sm-auto position-relative">
-              <input
-                id="searchBar"
-                type="text"
-                placeholder="search"
-                className="rounded-pill d-none d-md-inline"
-                style={{ outline: "none" }}
-              />
-              <button
-                id="searchBtn"
-                className="position-absolute bg-transparent pt-1 border-0"
-              >
-                <i className="fa fa-search"></i>
-              </button>
-            </div> */}
-            {/* <Col xs="auto"> */}
             <InputGroup>
               <InputGroup.Prepend>
                 <InputGroup.Text>
@@ -68,7 +36,6 @@ function Stocks() {
                 style={{ borderLeft: "transparent" }}
               />
             </InputGroup>
-            {/* </Col> */}
           </Form>
           <Card.Text>
             <ListGroup>
@@ -140,17 +107,3 @@ function Stocks() {
 }
 
 export default Stocks;
-
-/* <div className="row">
-                <span className="col-4">
-                  Sensex&nbsp; <span style={{ fontSize: "50%" }}>INDEX </span>
-                </span>
-                <span className="col-2">0.00%</span>
-                <input
-                  type="radio"
-                  style={{ marginTop: "6px" }}
-                  className="col-1"
-                ></input>
-
-                <span className="col-3">43637.98 </span>
-              </div> */

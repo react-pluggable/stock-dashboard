@@ -36,13 +36,6 @@ function Chart() {
                     +.28 (0.83%) <i className="fa fa-arrow-up"></i>
                   </span>
                 </div>
-                {/* <Form.Control as="select" custom>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Form.Control> */}
               </div>
             </div>
           </Card.Text>
