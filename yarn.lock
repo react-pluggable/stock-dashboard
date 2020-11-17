@@ -9152,6 +9152,13 @@ react-overlays@^4.1.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
+react-pluggable@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/react-pluggable/-/react-pluggable-0.4.2.tgz#0712ec7db6a21beb8330221bddb73c3bf4a74207"
+  integrity sha512-Hg3v7ouG6nbicqyRATjGXb9jNTO2oW043QrE6dEizQ8T4u1qwKYmR8AMcZkolczoigoZYc8zcbnZNvKxJkNxjw==
+  dependencies:
+    semver "^7.3.2"
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"

@@ -33,6 +33,10 @@ function Chart() {
                   <span className="text-success">
                     +.28 (0.83%) <i className="fa fa-arrow-up"></i>
                   </span>
+                  <br />
+                  <small style={{ color: "grey" }}>
+                    13 Nov, 4:00 pm GMT-5 Disclaimer
+                  </small>
                 </div>
               </Col>
             </Row>
