@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import { stocks } from "./defaultValue";
 
 function App() {
   return (

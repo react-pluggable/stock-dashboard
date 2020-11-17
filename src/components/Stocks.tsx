@@ -11,7 +11,7 @@ import {
 
 function Stocks() {
   return (
-    <div className="col-4">
+    <Col lg={4}>
       <Card>
         <Card.Body>
           <Card.Title>Stocks</Card.Title>
@@ -95,7 +95,7 @@ function Stocks() {
           </Card.Text>
         </Card.Body>
       </Card>
-    </div>
+    </Col>
   );
 }
 
