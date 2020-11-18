@@ -10,7 +10,7 @@ function Main({
   return (
     <div className="row m-3">
       <StockList setSelectedStock={setSelectedStock} />
-      <ContentPanel stock={setSelectedStock} />
+      <ContentPanel />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import {
   usePluginStore,
 } from "react-pluggable";
 
-function ContentPanel(props: any) {
+function ContentPanel() {
   const stocks = useContext(StockContext);
   const pluginStore: PluginStore = usePluginStore();
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
