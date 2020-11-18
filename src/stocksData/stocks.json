@@ -1,7 +1,9 @@
 {
   "stocks": [
     {
-      "SENSEX": [
+      "id": 1,
+      "name": "SENSEX",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 1.2,
@@ -55,7 +57,9 @@
       ]
     },
     {
-      "NIFTY 50": [
+      "id": 2,
+      "name": "NIFTY 50",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.2,
@@ -109,7 +113,9 @@
       ]
     },
     {
-      "LT": [
+      "id": 3,
+      "name": "LT",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.9,
@@ -163,7 +169,9 @@
       ]
     },
     {
-      "DHFL": [
+      "id": 4,
+      "name": "DHFL",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.9,
@@ -217,7 +225,9 @@
       ]
     },
     {
-      "Tesla": [
+      "id": 5,
+      "name": "Tesla",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.2,
@@ -271,7 +281,9 @@
       ]
     },
     {
-      "GM": [
+      "id": 6,
+      "name": "GM",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.9,
@@ -325,7 +337,9 @@
       ]
     },
     {
-      "Indigo": [
+      "id": 7,
+      "name": "Indigo",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.9,
@@ -379,7 +393,9 @@
       ]
     },
     {
-      "DEEPAKNTR": [
+      "id": 8,
+      "name": "DEEPAKNTR",
+      "data": [
         {
           "date": "2019-10-11",
           "percent": 2.2,
