@@ -2,7 +2,7 @@ import React from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
 
 class ChartsPlugin implements IPlugin {
-  namespace = "Chart";
+  namespace = "Charts";
   pluginStore!: PluginStore;
 
   private installedChart = new Map<string, React.Component>();
