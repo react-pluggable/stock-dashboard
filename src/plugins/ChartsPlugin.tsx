@@ -6,21 +6,24 @@ class ChartsPlugin implements IPlugin {
   pluginStore!: PluginStore;
 
   private installedChart = new Map<string, React.Component>();
-  private selectedChart!: React.Component;
+  private selectedChart!: string;
+
+  getPluginName(): string {
+    return `${this.namespace}@0.0.1`;
+  }
+
+  getDependencies(): string[] {
+    return [];
+  }
+
+  init(pluginStore: PluginStore): void {
+    this.pluginStore = pluginStore;
+  }
 
   addChart = (name: string, component: React.Component) => {
     this.installedChart.set(name, component);
   };
 
-  getPluginName(): string {
-    return `${this.namespace}@0.0.1`;
-  }
-  getDependencies(): string[] {
-    return [];
-  }
-  init(pluginStore: PluginStore): void {
-    this.pluginStore = pluginStore;
-  }
   activate(): void {
     this.pluginStore.addFunction(
       `${this.namespace}.addChart`,

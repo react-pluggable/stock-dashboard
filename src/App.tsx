@@ -19,10 +19,10 @@ export const StockContext = React.createContext(stocks);
 
 const pluginStore: PluginStore = createPluginStore();
 pluginStore.install(new RendererPlugin());
-pluginStore.install(new AuthPlugin());
-pluginStore.install(new ChartsPlugin());
-pluginStore.install(new ContentPlugin());
 pluginStore.install(new SkeletonPlugin());
+pluginStore.install(new AuthPlugin());
+pluginStore.install(new ContentPlugin());
+pluginStore.install(new ChartsPlugin());
 
 function App() {
   const [stocksCollection, setStocksCollection] = useState(stocks);
