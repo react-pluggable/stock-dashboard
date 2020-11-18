@@ -10,8 +10,12 @@ import {
 } from "react-bootstrap";
 import { StockContext } from "../App";
 
-function StocksList(props: any) {
-  const stocks = useContext(StockContext);
+function StocksList({
+  setSelectedStock,
+}: {
+  setSelectedStock: (id: number) => void;
+}) {
+  const stocksData = useContext(StockContext);
 
   return (
     <Col lg={4}>
@@ -35,7 +39,7 @@ function StocksList(props: any) {
           </Form>
           <Card.Text>
             <ListGroup>
-              {stocks.map((stock) => {
+              {stocksData.stocks.map((stock) => {
                 return (
                   <ListGroup.Item className="d-flex">
                     <span>
@@ -51,8 +55,9 @@ function StocksList(props: any) {
                       type="radio"
                       name="btn"
                       id={`${stock.id}`}
-                      onClick={() => props.findStock(stock.id)}
                       style={{ marginTop: "6px" }}
+                      checked={stocksData.selectedStockId === stock.id}
+                      onClick={() => setSelectedStock(stock.id)}
                     ></input>
                     &nbsp;&nbsp;
                     <span style={{ width: "75px" }}>
