@@ -1,7 +1,7 @@
 import React from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
 
-class ChartPlugin implements IPlugin {
+class ChartsPlugin implements IPlugin {
   namespace = "Chart";
   pluginStore!: PluginStore;
 
@@ -32,4 +32,4 @@ class ChartPlugin implements IPlugin {
   }
 }
 
-export default ChartPlugin;
+export default ChartsPlugin;

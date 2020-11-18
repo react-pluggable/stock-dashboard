@@ -13,14 +13,14 @@ import {
 import SkeletonPlugin from "./plugins/SkeletonPlugin";
 import AuthPlugin from "./plugins/AuthPlugin";
 import ContentPlugin from "./plugins/ContentPlugin";
-import ChartPlugin from "./plugins/ChartPlugin";
+import ChartsPlugin from "./plugins/ChartsPlugin";
 
 export const StockContext = React.createContext(stocks);
 
 const pluginStore: PluginStore = createPluginStore();
 pluginStore.install(new RendererPlugin());
 pluginStore.install(new AuthPlugin());
-pluginStore.install(new ChartPlugin());
+pluginStore.install(new ChartsPlugin());
 pluginStore.install(new ContentPlugin());
 pluginStore.install(new SkeletonPlugin());
 
