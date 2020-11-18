@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Card, Dropdown, Form, Col, Row } from "react-bootstrap";
 import { StockContext } from "../App";
 
-function Chart() {
+function Chart(props: any) {
   const stocks = useContext(StockContext);
 
   return (

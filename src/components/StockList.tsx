@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import { StockContext } from "../App";
 
-function StocksList() {
+function StocksList(props: any) {
   const stocks = useContext(StockContext);
 
   return (
@@ -36,29 +36,30 @@ function StocksList() {
           <Card.Text>
             <ListGroup>
               {stocks.map((stock) => {
-                let keys = Object.keys(stock);
-                let values = Object.values(stock);
-                let data = values[0];
-
-                if (data !== undefined) {
-                  console.log(data[0]);
-                  return (
-                    <ListGroup.Item className="d-flex">
-                      <span>
-                        {keys[0]}&nbsp;{" "}
-                        <span style={{ fontSize: "50%", color: "grey" }}>
-                          INDEX{" "}
-                        </span>
+                return (
+                  <ListGroup.Item className="d-flex">
+                    <span>
+                      {stock.name}&nbsp;
+                      <span style={{ fontSize: "50%", color: "grey" }}>
+                        INDEX
                       </span>
-                      <span className="ml-auto" style={{ color: "grey" }}>
-                        {data[0].percent} &nbsp;
-                      </span>
-                      <input type="radio" style={{ marginTop: "6px" }}></input>
-                      &nbsp;&nbsp;
-                      <span style={{ width: "75px" }}>{data[0].value} </span>
-                    </ListGroup.Item>
-                  );
-                }
+                    </span>
+                    <span className="ml-auto" style={{ color: "grey" }}>
+                      {stock.data[0].percent} &nbsp;
+                    </span>
+                    <input
+                      type="radio"
+                      name="btn"
+                      id={`${stock.id}`}
+                      onClick={() => props.findStock(stock.id)}
+                      style={{ marginTop: "6px" }}
+                    ></input>
+                    &nbsp;&nbsp;
+                    <span style={{ width: "75px" }}>
+                      {stock.data[0].value}{" "}
+                    </span>
+                  </ListGroup.Item>
+                );
               })}
             </ListGroup>
           </Card.Text>
