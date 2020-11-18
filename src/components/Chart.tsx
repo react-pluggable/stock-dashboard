@@ -4,7 +4,7 @@ import { StockContext } from "../App";
 
 function Chart(props: any) {
   const stocks = useContext(StockContext);
-  console.log(props.stock);
+
   return (
     <Col lg={8}>
       <Card>
