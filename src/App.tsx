@@ -9,12 +9,15 @@ export const StockContext = React.createContext(stocks);
 
 function App() {
   const [stocksCollection, setStocksCollection] = useState(stocks);
+  const setSelectedStock = (id: number) => {
+    setStocksCollection({ ...stocksCollection, selectedStockId: id });
+  };
 
   return (
     <div className="bg-light">
       <StockContext.Provider value={stocksCollection}>
         <Header />
-        <Main />
+        <Main setSelectedStock={setSelectedStock} />
       </StockContext.Provider>
     </div>
   );

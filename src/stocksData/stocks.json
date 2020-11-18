@@ -1,4 +1,5 @@
 {
+  "selectedStockId": 1,
   "stocks": [
     {
       "id": 1,
