@@ -8,11 +8,11 @@ import stocks from "./defaultValue";
 export const StockContext = React.createContext(stocks);
 
 function App() {
-  const stocksCollection = useState(stocks);
+  const [stocksCollection, setStocksCollection] = useState(stocks);
 
   return (
     <div className="bg-light">
-      <StockContext.Provider value={stocks}>
+      <StockContext.Provider value={stocksCollection}>
         <Header />
         <Main />
       </StockContext.Provider>
