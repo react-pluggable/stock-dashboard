@@ -1,16 +1,13 @@
 import React from "react";
-import { Card, Button, Form, FormControl } from "react-bootstrap";
-import { Col, InputGroup } from "react-bootstrap";
-import Stocks from "./Stocks";
+import StockList from "./StockList";
 import Chart from "./Chart";
 function Main() {
   return (
     <div className="row m-3">
-      <Stocks />
+      <StockList />
       <Chart />
     </div>
   );
 }
 
-const getSearchStyle = () => ({});
 export default Main;
