@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import StockList from "./StockList";
-import Chart from "./Chart";
+import ContentPanel from "./ContentPanel";
 import { StockContext } from "../App";
 function Main({
   setSelectedStock,
@@ -10,7 +10,7 @@ function Main({
   return (
     <div className="row m-3">
       <StockList setSelectedStock={setSelectedStock} />
-      <Chart stock={setSelectedStock} />
+      <ContentPanel stock={setSelectedStock} />
     </div>
   );
 }
