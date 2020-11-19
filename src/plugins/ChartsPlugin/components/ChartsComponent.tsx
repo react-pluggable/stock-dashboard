@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Dropdown, Container } from "react-bootstrap";
 import { usePluginStore } from "react-pluggable";
 
 export default function ChartsComponent({
   installedCharts,
+  selectedChart,
+  setSelectedChart,
 }: {
   installedCharts: Map<string, React.Component>;
+  selectedChart: string;
+  setSelectedChart: (chartName: string) => void;
 }) {
-  var pluginStore = usePluginStore();
+  const [, forceUpdate] = useState<any>(null);
+
+  let pluginStore = usePluginStore();
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 
   const getChartsList = () => {
@@ -19,7 +25,7 @@ export default function ChartsComponent({
   };
 
   let charts = getChartsList();
-
+  console.log(selectedChart, "!!");
   return (
     <Container>
       <Row>
@@ -29,7 +35,17 @@ export default function ChartsComponent({
             <Dropdown.Menu>
               {charts.map((chartName: string, index: number) => {
                 // const Component = chart;
-                return <Dropdown.Item key={index}>{chartName}</Dropdown.Item>;
+                return (
+                  <Dropdown.Item
+                    onClick={() => {
+                      setSelectedChart("test");
+                      forceUpdate(new Date());
+                    }}
+                    key={index}
+                  >
+                    {chartName}
+                  </Dropdown.Item>
+                );
               })}
             </Dropdown.Menu>
           </Dropdown>
