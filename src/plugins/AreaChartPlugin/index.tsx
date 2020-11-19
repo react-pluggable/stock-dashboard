@@ -23,9 +23,6 @@ class AreaChartPlugin implements IPlugin {
     this.pluginStore.executeFunction("Charts.addChart", "area-chart", () => (
       <AreaChartComponent />
     ));
-    // this.pluginStore.executeFunction("Renderer.add", "content-chart", () => (
-    //   <AreaChartComponent />
-    // ));
   }
 
   deactivate(): void {
