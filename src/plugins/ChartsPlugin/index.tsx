@@ -9,6 +9,13 @@ class ChartsPlugin implements IPlugin {
   private installedChart = new Map<string, React.Component>();
   private selectedChart!: string;
 
+  setSelectedChart = (chartName: string) => {
+    console.log(chartName, "!!");
+    this.selectedChart = chartName;
+    //@ts-ignore
+    window.selectedChart = this.selectedChart;
+  };
+
   getPluginName(): string {
     return `${this.namespace}@0.0.1`;
   }
@@ -34,7 +41,11 @@ class ChartsPlugin implements IPlugin {
     );
 
     this.pluginStore.executeFunction("Renderer.add", "content", () => (
-      <ChartsComponent installedCharts={this.installedChart} />
+      <ChartsComponent
+        installedCharts={this.installedChart}
+        selectedChart={this.selectedChart}
+        setSelectedChart={this.setSelectedChart}
+      />
     ));
   }
   deactivate(): void {
