@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
 import AreaChartComponent from "./components/AreaChartComponent";
-import { StockContext } from "../../App";
 
 class AreaChartPlugin implements IPlugin {
   namespace = "AreaChart";
@@ -20,7 +19,7 @@ class AreaChartPlugin implements IPlugin {
   }
 
   activate(): void {
-    this.pluginStore.executeFunction("Charts.addChart", "area-chart", () => (
+    this.pluginStore.executeFunction("Charts.addChart", "Area Chart", () => (
       <AreaChartComponent />
     ));
   }

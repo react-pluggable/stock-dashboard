@@ -11,11 +11,11 @@ export default function ChartsComponent({
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 
   const getChartsList = () => {
-    let installedChartsArray: Array<React.Component> = [];
+    let installedChartsNameArray: Array<string> = [];
     for (let [key, value] of installedCharts) {
-      installedChartsArray.push(value);
+      installedChartsNameArray.push(key);
     }
-    return installedChartsArray;
+    return installedChartsNameArray;
   };
 
   let charts = getChartsList();
@@ -27,13 +27,9 @@ export default function ChartsComponent({
           <Dropdown>
             <Dropdown.Toggle>Pie Chart</Dropdown.Toggle>
             <Dropdown.Menu>
-              {charts.map((chart: React.Component, index: number) => {
+              {charts.map((chartName: string, index: number) => {
                 // const Component = chart;
-                return (
-                  <Dropdown.Item key={index}>
-                    {/* <Component /> */}
-                  </Dropdown.Item>
-                );
+                return <Dropdown.Item key={index}>{chartName}</Dropdown.Item>;
               })}
             </Dropdown.Menu>
           </Dropdown>

@@ -20,7 +20,7 @@ class LineChartPlugin implements IPlugin {
   }
 
   activate(): void {
-    this.pluginStore.executeFunction("Charts.addChart", "line-chart", () => (
+    this.pluginStore.executeFunction("Charts.addChart", "Line Chart", () => (
       <LineChartComponent />
     ));
   }

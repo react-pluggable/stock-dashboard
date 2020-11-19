@@ -11,7 +11,7 @@ function LineChartComponent() {
   );
 
   let labelData = stock.data;
-  let coordinates = new Array();
+  let coordinates: Array<{ x: any; y: any }> = [];
   labelData.forEach((obj) => {
     let parts = obj.date.split("-");
     let date = new Date(parts[0], parts[1] - 1, parts[2]);
@@ -29,7 +29,7 @@ function LineChartComponent() {
         data: coordinates,
       },
     ],
-    [stocksData]
+    [stock.name, coordinates]
   );
 
   const series = React.useMemo(
@@ -38,6 +38,7 @@ function LineChartComponent() {
     }),
     []
   );
+
   const axes = React.useMemo(
     () => [
       { primary: true, position: "bottom", type: "time" },
