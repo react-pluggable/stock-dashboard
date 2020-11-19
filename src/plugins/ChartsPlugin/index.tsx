@@ -1,6 +1,5 @@
 import React from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
-import { Row, Col, Dropdown, Container } from "react-bootstrap";
 import ChartsComponent from "./components/ChartsComponent";
 
 class ChartsPlugin implements IPlugin {
@@ -29,11 +28,13 @@ class ChartsPlugin implements IPlugin {
   activate(): void {
     this.pluginStore.addFunction(
       `${this.namespace}.addChart`,
-      this.addChart.bind(this)
+      (name: string, component: React.Component) => {
+        this.addChart(name, component);
+      }
     );
 
     this.pluginStore.executeFunction("Renderer.add", "content", () => (
-      <ChartsComponent />
+      <ChartsComponent installedCharts={this.installedChart} />
     ));
   }
   deactivate(): void {

@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
 
-import { StockContext } from "../../App";
 import LineChartComponent from "./component/LineChartComponent";
 
 class LineChartPlugin implements IPlugin {
@@ -22,9 +21,6 @@ class LineChartPlugin implements IPlugin {
 
   activate(): void {
     this.pluginStore.executeFunction("Charts.addChart", "line-chart", () => (
-      <LineChartComponent />
-    ));
-    this.pluginStore.executeFunction("Renderer.add", "content-chart", () => (
       <LineChartComponent />
     ));
   }
