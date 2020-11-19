@@ -13,7 +13,9 @@ import {
 import SkeletonPlugin from "./plugins/SkeletonPlugin";
 import AuthPlugin from "./plugins/AuthPlugin";
 import ContentPlugin from "./plugins/ContentPlugin";
-import ChartsPlugin from "./plugins/ChartsPlugin";
+import ChartsPlugin from "./plugins/ChartsPlugin/index";
+import LineChartPlugin from "./plugins/LineChartPlugin";
+import AreaChartPlugin from "./plugins/AreaChartPlugin";
 
 export const StockContext = React.createContext(stocks);
 
@@ -23,6 +25,8 @@ pluginStore.install(new SkeletonPlugin());
 pluginStore.install(new AuthPlugin());
 pluginStore.install(new ContentPlugin());
 pluginStore.install(new ChartsPlugin());
+pluginStore.install(new LineChartPlugin());
+pluginStore.install(new AreaChartPlugin());
 
 function App() {
   const [stocksCollection, setStocksCollection] = useState(stocks);
@@ -31,7 +35,7 @@ function App() {
   };
 
   return (
-    <div className="bg-light">
+    <div>
       <StockContext.Provider value={stocksCollection}>
         <Header />
         <PluginProvider pluginStore={pluginStore}>
