@@ -14,6 +14,7 @@ import SkeletonPlugin from "./plugins/SkeletonPlugin";
 import AuthPlugin from "./plugins/AuthPlugin";
 import ContentPlugin from "./plugins/ContentPlugin";
 import ChartsPlugin from "./plugins/ChartsPlugin";
+import LineChartPlugin from "./plugins/LineChartPlugin/index";
 
 export const StockContext = React.createContext(stocks);
 
@@ -23,6 +24,7 @@ pluginStore.install(new SkeletonPlugin());
 pluginStore.install(new AuthPlugin());
 pluginStore.install(new ContentPlugin());
 pluginStore.install(new ChartsPlugin());
+pluginStore.install(new LineChartPlugin());
 
 function App() {
   const [stocksCollection, setStocksCollection] = useState(stocks);
