@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
-
+import AreaChartComponent from "./components/AreaChartComponent";
 import { StockContext } from "../../App";
-import LineChartComponent from "./component/LineChartComponent";
 
-class LineChartPlugin implements IPlugin {
-  namespace = "LineChart";
+class AreaChartPlugin implements IPlugin {
+  namespace = "AreaChart";
   pluginStore!: PluginStore;
 
   getPluginName(): string {
@@ -21,19 +20,19 @@ class LineChartPlugin implements IPlugin {
   }
 
   activate(): void {
-    this.pluginStore.executeFunction("Charts.addChart", "line-chart", () => (
-      <LineChartComponent />
+    this.pluginStore.executeFunction("Charts.addChart", "area-chart", () => (
+      <AreaChartComponent />
     ));
-    this.pluginStore.executeFunction("Renderer.add", "content-chart", () => (
-      <LineChartComponent />
-    ));
+    // this.pluginStore.executeFunction("Renderer.add", "content-chart", () => (
+    //   <AreaChartComponent />
+    // ));
   }
 
   deactivate(): void {
     this.pluginStore.executeFunction("Renderer.remove", "content-chart", () => (
-      <LineChartComponent />
+      <AreaChartComponent />
     ));
   }
 }
 
-export default LineChartPlugin;
+export default AreaChartPlugin;

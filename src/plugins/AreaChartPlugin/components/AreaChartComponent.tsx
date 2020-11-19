@@ -32,10 +32,16 @@ function LineChartComponent() {
     [stocksData]
   );
 
+  const series = React.useMemo(
+    () => ({
+      type: "area",
+    }),
+    []
+  );
   const axes = React.useMemo(
     () => [
-      { primary: true, type: "time", position: "bottom" },
-      { type: "linear", position: "left" },
+      { primary: true, position: "bottom", type: "time" },
+      { position: "left", type: "linear", stacked: true },
     ],
     []
   );

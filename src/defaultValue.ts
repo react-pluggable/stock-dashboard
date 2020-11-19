@@ -8,12 +8,12 @@ const stockData = {
         {
           date: "2019-10-11",
           percent: 1.2,
-          value: 43630.71,
+          value: 24180.71,
         },
         {
           date: "2019-10-12",
           percent: 2.0,
-          value: 24100.0,
+          value: 24180.0,
         },
         {
           date: "2019-10-13",
@@ -399,18 +399,18 @@ const stockData = {
       data: [
         {
           date: "2019-10-11",
-          percent: 2.2,
+          percent: 2.0,
           value: 24340.0,
         },
         {
           date: "2019-10-12",
-          percent: 2.0,
-          value: 24320.0,
+          percent: 2.2,
+          value: 22320.0,
         },
         {
           date: "2019-10-13",
-          percent: 2.8,
-          value: 24300.0,
+          percent: 2.4,
+          value: 18300.0,
         },
         {
           date: "2019-10-14",
@@ -419,32 +419,32 @@ const stockData = {
         },
         {
           date: "2019-10-15",
-          percent: 2.4,
-          value: 24260.0,
+          percent: 2.8,
+          value: 20260.0,
         },
         {
           date: "2019-10-16",
-          percent: 2.9,
-          value: 24240.0,
+          percent: 2.1,
+          value: 22240.0,
         },
         {
           date: "2019-10-17",
-          percent: 2.5,
-          value: 24220.0,
+          percent: 2.12,
+          value: 20220.0,
         },
         {
           date: "2019-10-18",
-          percent: 2.1,
-          value: 24200.0,
+          percent: 2.14,
+          value: 22200.0,
         },
         {
           date: "2019-10-19",
-          percent: 2.0,
-          value: 24100.0,
+          percent: 2.16,
+          value: 20100.0,
         },
         {
           date: "2019-10-20",
-          percent: 2.9,
+          percent: 2.17,
           value: 24000.0,
         },
       ],
