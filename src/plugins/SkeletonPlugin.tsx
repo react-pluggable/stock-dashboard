@@ -27,8 +27,7 @@ class SkeletonPlugin implements IPlugin {
         <div>
           <Row>
             <Col md={12}>
-              {/* <Renderer placement="header" /> */}
-              <h3>Hello James</h3>
+              <Renderer placement="header" />
               <hr></hr>
             </Col>
           </Row>

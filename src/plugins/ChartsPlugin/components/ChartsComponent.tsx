@@ -36,7 +36,7 @@ export default function ChartsComponent({
   return (
     <div>
       <Row>
-        <div className="ml-auto">
+        <div className="ml-auto mr-3">
           <Dropdown>
             <Dropdown.Toggle>
               {selectedChart === "" ? "Selected Chart" : selectedChart}
