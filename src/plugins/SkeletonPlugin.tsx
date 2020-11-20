@@ -24,10 +24,12 @@ class SkeletonPlugin implements IPlugin {
     );
     this.pluginStore.executeFunction("Renderer.add", "root", () => {
       return (
-        <Container>
+        <div>
           <Row>
             <Col md={12}>
-              <Renderer placement="header" />
+              {/* <Renderer placement="header" /> */}
+              <h3>Hello James</h3>
+              <hr></hr>
             </Col>
           </Row>
           <Row>
@@ -35,7 +37,7 @@ class SkeletonPlugin implements IPlugin {
               <Renderer placement="content" />
             </Col>
           </Row>
-        </Container>
+        </div>
       );
     });
   }
