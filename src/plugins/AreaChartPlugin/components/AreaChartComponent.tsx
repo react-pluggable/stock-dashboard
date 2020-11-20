@@ -47,6 +47,20 @@ function LineChartComponent() {
     []
   );
 
+  let chartOptions = {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: false,
+            min: 20000,
+            max: 30000,
+          },
+        },
+      ],
+    },
+  };
+
   return (
     <div
       style={{
@@ -54,7 +68,13 @@ function LineChartComponent() {
         height: "300px",
       }}
     >
-      <Chart data={data} axes={axes} tooltip />
+      <Chart
+        series={series}
+        data={data}
+        axes={axes}
+        tooltip
+        options={chartOptions}
+      />
     </div>
   );
 }
