@@ -59,10 +59,10 @@ export default function ChartsComponent({
         </div>
       </Row>
       <Row className="mt-5">
-        <Col sm={8}>
+        <Col md={8} style={{ overflowX: "auto" }}>
           {selectedChart === "" ? <p>No chart selected</p> : <ChartComponent />}
         </Col>
-        <Col sm={4}>
+        <Col md={4}>
           <div
             className="p-5"
             style={{

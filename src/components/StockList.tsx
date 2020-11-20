@@ -18,7 +18,7 @@ function StocksList({
   const stocksData = useContext(StockContext);
 
   return (
-    <Col lg={4}>
+    <Col lg={4} className="mt-4">
       <Card>
         <Card.Body>
           <Card.Title>Stocks</Card.Title>
@@ -37,8 +37,8 @@ function StocksList({
               />
             </div>
           </Form>
-          <Card.Text>
-            <ListGroup>
+          <Card.Text style={{ overflowX: "auto" }}>
+            <ListGroup style={{ width: "380px" }}>
               {stocksData.stocks.map((stock) => {
                 return (
                   <ListGroup.Item className="d-flex">

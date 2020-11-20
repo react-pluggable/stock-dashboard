@@ -15,7 +15,7 @@ function ContentPanel() {
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 
   return (
-    <Col lg={8}>
+    <Col lg={8} className="mt-4">
       <Card style={{ height: "100%" }}>
         <Card.Body className="pt-5">
           <Renderer placement={"root"} />
