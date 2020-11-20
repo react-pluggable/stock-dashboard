@@ -6,7 +6,7 @@ class ChartsPlugin implements IPlugin {
   namespace = "Charts";
   pluginStore!: PluginStore;
 
-  private installedChart = new Map<string, React.Component>();
+  private installedChart = new Map<string, JSX.Element>();
 
   getPluginName(): string {
     return `${this.namespace}@0.0.1`;
@@ -20,14 +20,14 @@ class ChartsPlugin implements IPlugin {
     this.pluginStore = pluginStore;
   }
 
-  addChart = (name: string, component: React.Component) => {
+  addChart = (name: string, component: JSX.Element) => {
     this.installedChart.set(name, component);
   };
 
   activate(): void {
     this.pluginStore.addFunction(
       `${this.namespace}.addChart`,
-      (name: string, component: React.Component) => {
+      (name: string, component: JSX.Element) => {
         this.addChart(name, component);
       }
     );

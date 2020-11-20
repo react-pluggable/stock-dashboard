@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Row, Dropdown, Container } from "react-bootstrap";
 import { usePluginStore } from "react-pluggable";
+
+import LineChartComponent from "../../LineChartPlugin/component/LineChartComponent";
 
 export default function ChartsComponent({
   installedCharts,
 }: {
-  installedCharts: Map<string, React.Component>;
+  installedCharts: Map<string, JSX.Element>;
 }) {
   const [selectedChart, setSelectedChart] = useState("");
 
@@ -16,6 +18,7 @@ export default function ChartsComponent({
   }, [installedCharts]);
 
   let pluginStore = usePluginStore();
+
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 
   const getChartsList = () => {
@@ -28,12 +31,16 @@ export default function ChartsComponent({
 
   let charts = getChartsList();
 
+  let ChartComponent: any = installedCharts.get(selectedChart);
+
   return (
     <Container>
       <Row>
         <div className="ml-auto">
           <Dropdown>
-            <Dropdown.Toggle>Pie Chart</Dropdown.Toggle>
+            <Dropdown.Toggle>
+              {selectedChart === "" ? "Selected Chart" : selectedChart}
+            </Dropdown.Toggle>
             <Dropdown.Menu>
               {charts.map((chartName: string, index: number) => {
                 return (
@@ -52,7 +59,7 @@ export default function ChartsComponent({
         </div>
       </Row>
       <Row>
-        <Renderer placement="content-chart" />
+        {selectedChart === "" ? <p>No chart selected</p> : <ChartComponent />}
       </Row>
     </Container>
   );
