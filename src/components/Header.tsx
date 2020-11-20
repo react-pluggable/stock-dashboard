@@ -19,10 +19,6 @@ export default function Header() {
         >
           <span style={{ color: "grey" }}> Sample </span>Stock
         </Navbar.Brand>
-
-        <Nav className="ml-auto mr-5">
-          <i className="fas fa-user-alt" style={{ fontSize: "24px" }}></i>
-        </Nav>
       </Navbar>
     </div>
   );

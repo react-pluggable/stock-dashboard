@@ -54,7 +54,7 @@ function LineChartComponent() {
         height: "300px",
       }}
     >
-      <Chart data={data} axes={axes} tooltip />
+      <Chart series={series} data={data} axes={axes} tooltip />
     </div>
   );
 }
