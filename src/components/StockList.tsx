@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   Card,
   Button,
@@ -16,7 +16,15 @@ function StocksList({
   setSelectedStock: (id: number) => void;
 }) {
   const stocksData = useContext(StockContext);
+  const [search, setSearch] = useState("");
 
+  const handleChange = (event: any) => {
+    setSearch(event.target.value);
+  };
+
+  let filteredStocks = stocksData.stocks.filter(
+    (stock) => stock.name.toLowerCase().indexOf(search) !== -1
+  );
   return (
     <Col lg={4} className="mt-4">
       <Card>
@@ -33,13 +41,15 @@ function StocksList({
                 type="text"
                 placeholder="Search"
                 className="form-control"
+                value={search}
+                onChange={handleChange}
                 style={{ paddingLeft: "35px" }}
               />
             </div>
           </Form>
           <Card.Text style={{ overflowX: "auto" }}>
             <ListGroup style={{ width: "380px" }}>
-              {stocksData.stocks.map((stock) => {
+              {filteredStocks.map((stock) => {
                 return (
                   <ListGroup.Item className="d-flex">
                     <span>

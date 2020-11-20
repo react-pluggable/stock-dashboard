@@ -50,7 +50,7 @@ function LineChartComponent() {
   return (
     <div
       style={{
-        width: "500px",
+        width: "95%",
         height: "300px",
       }}
     >

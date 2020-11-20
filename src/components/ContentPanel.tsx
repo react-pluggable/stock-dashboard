@@ -10,7 +10,6 @@ import {
 } from "react-pluggable";
 
 function ContentPanel() {
-  const stocks = useContext(StockContext);
   const pluginStore: PluginStore = usePluginStore();
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 
