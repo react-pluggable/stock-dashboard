@@ -14,7 +14,7 @@ export default function SkeletonComponent() {
     <div>
       <Row>
         <Col md={12}>
-          <h1 className="pl-4 pb-2">{stock.name}</h1>
+          <h3 className="pl-4 pb-2">{stock.name}</h3>
           <hr></hr>
         </Col>
       </Row>
