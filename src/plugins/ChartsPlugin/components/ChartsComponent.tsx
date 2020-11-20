@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Row, Dropdown, Container } from "react-bootstrap";
+import { Row, Dropdown, Container, Col } from "react-bootstrap";
 import { usePluginStore } from "react-pluggable";
 
 import LineChartComponent from "../../LineChartPlugin/component/LineChartComponent";
@@ -34,9 +34,9 @@ export default function ChartsComponent({
   let ChartComponent: any = installedCharts.get(selectedChart);
 
   return (
-    <Container>
+    <div>
       <Row>
-        <div className="ml-auto">
+        <div className="ml-auto mr-3">
           <Dropdown>
             <Dropdown.Toggle>
               {selectedChart === "" ? "Selected Chart" : selectedChart}
@@ -58,9 +58,23 @@ export default function ChartsComponent({
           </Dropdown>
         </div>
       </Row>
-      <Row>
-        {selectedChart === "" ? <p>No chart selected</p> : <ChartComponent />}
+      <Row className="mt-5">
+        <Col sm={8}>
+          {selectedChart === "" ? <p>No chart selected</p> : <ChartComponent />}
+        </Col>
+        <Col sm={4}>
+          <div
+            className="p-5"
+            style={{
+              borderLeft: "1px solid lightslategray",
+              marginTop: "100px",
+              height: "200px",
+            }}
+          >
+            Demo Data
+          </div>
+        </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
