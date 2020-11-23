@@ -9,7 +9,7 @@ function LineChartComponent() {
   let stock: any = stocksData.stocks.find(
     (stock) => stock.id === stocksData.selectedStockId
   );
-  var name = stock.name;
+
   let labelData = stock.data;
   let coordinates = new Array();
   labelData.forEach((obj) => {

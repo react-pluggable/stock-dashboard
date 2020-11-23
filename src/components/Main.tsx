@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import StockList from "./StockList";
 import ContentPanel from "./ContentPanel";
-import { StockContext } from "../App";
+
 function Main({
   setSelectedStock,
 }: {

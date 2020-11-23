@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { IPlugin, PluginStore } from "react-pluggable";
 import AreaChartComponent from "./components/AreaChartComponent";
 

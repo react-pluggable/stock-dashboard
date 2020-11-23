@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Row, Container, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { usePluginStore } from "react-pluggable";
 import { StockContext } from "../../../App";
 

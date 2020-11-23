@@ -1,13 +1,5 @@
 import React, { useContext, useState } from "react";
-import {
-  Card,
-  Button,
-  Form,
-  FormControl,
-  Col,
-  InputGroup,
-  ListGroup,
-} from "react-bootstrap";
+import { Card, Form, Col, ListGroup } from "react-bootstrap";
 import { StockContext } from "../App";
 
 function StocksList({
@@ -48,11 +40,11 @@ function StocksList({
               />
             </div>
           </Form>
-          <Card.Text style={{ overflowX: "auto" }}>
+          <div style={{ overflowX: "auto" }}>
             <ListGroup className="stockList">
               {filteredStocks.map((stock) => {
                 return (
-                  <ListGroup.Item className="d-flex">
+                  <ListGroup.Item className="d-flex" key={stock.id}>
                     <span>
                       {stock.name}&nbsp;
                       <span style={{ fontSize: "50%", color: "grey" }}>
@@ -68,7 +60,7 @@ function StocksList({
                       id={`${stock.id}`}
                       style={{ marginTop: "6px" }}
                       checked={stocksData.selectedStockId === stock.id}
-                      onClick={() => setSelectedStock(stock.id)}
+                      onChange={() => setSelectedStock(stock.id)}
                     ></input>
                     &nbsp;&nbsp;
                     <span style={{ width: "75px" }}>
@@ -78,7 +70,7 @@ function StocksList({
                 );
               })}
             </ListGroup>
-          </Card.Text>
+          </div>
         </Card.Body>
       </Card>
     </Col>

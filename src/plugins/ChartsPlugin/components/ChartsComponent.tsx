@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Dropdown, Container, Col } from "react-bootstrap";
-import { usePluginStore } from "react-pluggable";
-
-import LineChartComponent from "../../LineChartPlugin/component/LineChartComponent";
 
 export default function ChartsComponent({
   installedCharts,
@@ -16,10 +13,6 @@ export default function ChartsComponent({
       setSelectedChart(installedCharts.keys().next().value);
     }
   }, [installedCharts]);
-
-  let pluginStore = usePluginStore();
-
-  let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 
   const getChartsList = () => {
     let installedChartsNameArray: Array<string> = [];

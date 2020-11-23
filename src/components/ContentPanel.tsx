@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Card, Dropdown, Form, Col, Row } from "react-bootstrap";
+import React from "react";
+import { Card, Col } from "react-bootstrap";
 
 import { PluginStore, usePluginStore } from "react-pluggable";
 
