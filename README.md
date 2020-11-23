@@ -1,39 +1,14 @@
-# Getting Started with Create React App
+# Stock-Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and library [react-pluggable](https://www.npmjs.com/package/react-pluggable)
+## Description
+
+A demo to showcase the functionality of [React](https://reactjs.org/) and [react-pluggable](https://react-pluggable.github.io/). We have tried to build a stock monitoring app that showcases data in graph format. `react-pluggable` allows you to add features in a pluggable way.
+![alt-text](public/images/ss1.png)
 
 ## How to use
 
-Install react-pluggable using
-
-> yarn add react-pluggable
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can select a stock to see its data in the selected chart format. You can also use search to filter out the preferred stock.
 
 ## Role of react-pluggable
 
-It is used to add charts at runtime. Whenever you want to add a new type of chart to the app, you simple create a plugin for it and install it in your app and similarly if you want to remove a chart from the app, you can remove or comment its line of installation.
-
-## ScreenShots
-
-![alt-text](public/images/ss1.png)
+We have used `react-pluggable` to inject different types of graphs in run-time. To add a new type a graph, a person can simply add a new plugin and the graph will automatically come as an option. The application graciously shows the ease of use of the plugin and how it can be injected anywhere inside the react application to render or to just install a functionality.
