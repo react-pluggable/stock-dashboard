@@ -57,7 +57,7 @@ export default function ChartsComponent({
         </Dropdown>
       </Row>
       <Row className="mt-5">
-        <Col>
+        <Col className="chartContainer">
           {selectedChart === "" ? <p>No chart selected</p> : <ChartComponent />}
         </Col>
       </Row>

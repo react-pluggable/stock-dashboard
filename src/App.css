@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 400px) {
+  .stockList {
+    width: 150%;
+  }
+}
+
+@media (max-width: 280px) {
+  .stockList {
+    width: 200%;
+  }
+}
+
+.chart {
+  width: 90%;
+  height: 300px;
+}
+@media (max-width: 450px) {
+  .chart {
+    width: 200%;
+    height: 300px;
+  }
+  .chartContainer {
+    overflow-x: auto;
+  }
+}

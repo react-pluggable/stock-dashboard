@@ -48,7 +48,7 @@ function StocksList({
             </div>
           </Form>
           <Card.Text style={{ overflowX: "auto" }}>
-            <ListGroup style={{ width: "380px" }}>
+            <ListGroup className="stockList">
               {filteredStocks.map((stock) => {
                 return (
                   <ListGroup.Item className="d-flex">

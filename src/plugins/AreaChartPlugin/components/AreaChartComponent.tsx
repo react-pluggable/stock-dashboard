@@ -48,12 +48,7 @@ function LineChartComponent() {
   );
 
   return (
-    <div
-      style={{
-        width: "95%",
-        height: "300px",
-      }}
-    >
+    <div className="chart">
       <Chart series={series} data={data} axes={axes} tooltip />
     </div>
   );
