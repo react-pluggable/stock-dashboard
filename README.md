@@ -2,7 +2,7 @@
 
 ## Description
 
-A demo to showcase the functionality of [React](https://reactjs.org/) and [react-pluggable](https://react-pluggable.github.io/). We have tried to build a stock monitoring app that showcases data in graph format. `react-pluggable` allows you to add features in a pluggable way.
+A [demo](https://agile-garden-94979.herokuapp.com/) to showcase the functionality of [React](https://reactjs.org/) and [react-pluggable](https://react-pluggable.github.io/). We have tried to build a stock monitoring app that showcases data in graph format. `react-pluggable` allows you to add features in a pluggable way.
 ![alt-text](public/images/ss1.png)
 
 ## How to use
