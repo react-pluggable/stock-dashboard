@@ -4,15 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to use
 
+Install react-pluggable using
+
+> yarn add react-pluggable
+
 In the project directory, you can run:
 
 ### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
@@ -31,7 +32,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Role of react-pluggable
 
-It is used to add components at runtime. Whenever you want to add a new type of chart to the app, you simple create a plugin for it and install it in your app and similarly if you want to remove a chart from the app, you can remove or comment its line of installation.
+It is used to add charts at runtime. Whenever you want to add a new type of chart to the app, you simple create a plugin for it and install it in your app and similarly if you want to remove a chart from the app, you can remove or comment its line of installation.
 
 ## ScreenShots
 
