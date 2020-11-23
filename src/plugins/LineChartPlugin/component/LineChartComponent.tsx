@@ -9,7 +9,7 @@ function LineChartComponent() {
   let stock: any = stocksData.stocks.find(
     (stock) => stock.id === stocksData.selectedStockId
   );
-  var name = stock.name;
+
   let labelData = stock.data;
   let coordinates = new Array();
   labelData.forEach((obj) => {
@@ -41,12 +41,7 @@ function LineChartComponent() {
   );
 
   return (
-    <div
-      style={{
-        width: "500px",
-        height: "300px",
-      }}
-    >
+    <div className="chart">
       <Chart data={data} axes={axes} tooltip />
     </div>
   );

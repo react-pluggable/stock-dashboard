@@ -12,6 +12,7 @@ function LineChartComponent() {
 
   let labelData = stock.data;
   let coordinates: Array<{ x: any; y: any }> = [];
+
   labelData.forEach((obj) => {
     let parts = obj.date.split("-");
     let date = new Date(parts[0], parts[1] - 1, parts[2]);
@@ -48,12 +49,7 @@ function LineChartComponent() {
   );
 
   return (
-    <div
-      style={{
-        width: "500px",
-        height: "300px",
-      }}
-    >
+    <div className="chart">
       <Chart series={series} data={data} axes={axes} tooltip />
     </div>
   );

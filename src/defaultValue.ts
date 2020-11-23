@@ -227,7 +227,7 @@ const stockData = {
     },
     {
       id: 5,
-      name: "Tesla",
+      name: "TESLA",
       data: [
         {
           date: "2019-10-11",
@@ -339,7 +339,7 @@ const stockData = {
     },
     {
       id: 7,
-      name: "Indigo",
+      name: "INDIGO",
       data: [
         {
           date: "2019-10-11",

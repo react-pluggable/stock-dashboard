@@ -1,16 +1,9 @@
-import React, { useContext } from "react";
-import { Card, Dropdown, Form, Col, Row } from "react-bootstrap";
-import { StockContext } from "../App";
-import {
-  PluginStore,
-  createPluginStore,
-  RendererPlugin,
-  PluginProvider,
-  usePluginStore,
-} from "react-pluggable";
+import React from "react";
+import { Card, Col } from "react-bootstrap";
+
+import { PluginStore, usePluginStore } from "react-pluggable";
 
 function ContentPanel() {
-  const stocks = useContext(StockContext);
   const pluginStore: PluginStore = usePluginStore();
   let Renderer = pluginStore.executeFunction("Renderer.getRendererComponent");
 

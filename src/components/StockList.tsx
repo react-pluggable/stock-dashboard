@@ -1,13 +1,5 @@
-import React, { useContext } from "react";
-import {
-  Card,
-  Button,
-  Form,
-  FormControl,
-  Col,
-  InputGroup,
-  ListGroup,
-} from "react-bootstrap";
+import React, { useContext, useState } from "react";
+import { Card, Form, Col, ListGroup } from "react-bootstrap";
 import { StockContext } from "../App";
 
 function StocksList({
@@ -16,7 +8,16 @@ function StocksList({
   setSelectedStock: (id: number) => void;
 }) {
   const stocksData = useContext(StockContext);
+  const [search, setSearch] = useState("");
 
+  const handleChange = (event: any) => {
+    setSearch(event.target.value);
+  };
+
+  let filteredStocks = stocksData.stocks.filter(
+    (stock) =>
+      stock.name.toLowerCase().indexOf(search.toLocaleLowerCase()) !== -1
+  );
   return (
     <Col lg={4} className="mt-4">
       <Card>
@@ -33,15 +34,17 @@ function StocksList({
                 type="text"
                 placeholder="Search"
                 className="form-control"
+                value={search}
+                onChange={handleChange}
                 style={{ paddingLeft: "35px" }}
               />
             </div>
           </Form>
-          <Card.Text style={{ overflowX: "auto" }}>
-            <ListGroup style={{ width: "380px" }}>
-              {stocksData.stocks.map((stock) => {
+          <div style={{ overflowX: "auto" }}>
+            <ListGroup className="stockList">
+              {filteredStocks.map((stock) => {
                 return (
-                  <ListGroup.Item className="d-flex">
+                  <ListGroup.Item className="d-flex" key={stock.id}>
                     <span>
                       {stock.name}&nbsp;
                       <span style={{ fontSize: "50%", color: "grey" }}>
@@ -57,7 +60,7 @@ function StocksList({
                       id={`${stock.id}`}
                       style={{ marginTop: "6px" }}
                       checked={stocksData.selectedStockId === stock.id}
-                      onClick={() => setSelectedStock(stock.id)}
+                      onChange={() => setSelectedStock(stock.id)}
                     ></input>
                     &nbsp;&nbsp;
                     <span style={{ width: "75px" }}>
@@ -67,7 +70,7 @@ function StocksList({
                 );
               })}
             </ListGroup>
-          </Card.Text>
+          </div>
         </Card.Body>
       </Card>
     </Col>
