@@ -11,7 +11,7 @@ function ContentPanel() {
     <Col lg={8} className="mt-4">
       <Card style={{ height: "100%" }}>
         <Card.Body className="pt-5">
-          <Renderer placement={"root"} />
+          <Renderer placement="root" />
         </Card.Body>
       </Card>
     </Col>
