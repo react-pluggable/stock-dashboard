@@ -23,15 +23,12 @@ function LineChartComponent() {
     });
   });
 
-  const data = React.useMemo(
-    () => [
-      {
-        label: stock.name,
-        data: coordinates,
-      },
-    ],
-    [stock.name, coordinates]
-  );
+  const data = [
+    {
+      label: stock.name,
+      data: coordinates,
+    },
+  ];
 
   const series = React.useMemo(
     () => ({
@@ -40,13 +37,10 @@ function LineChartComponent() {
     []
   );
 
-  const axes = React.useMemo(
-    () => [
-      { primary: true, position: "bottom", type: "time" },
-      { position: "left", type: "linear", stacked: true },
-    ],
-    []
-  );
+  const axes = [
+    { primary: true, position: "bottom", type: "time" },
+    { position: "left", type: "linear", stacked: true },
+  ];
 
   return (
     <div className="chart">
