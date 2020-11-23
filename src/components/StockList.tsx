@@ -23,7 +23,8 @@ function StocksList({
   };
 
   let filteredStocks = stocksData.stocks.filter(
-    (stock) => stock.name.toLowerCase().indexOf(search) !== -1
+    (stock) =>
+      stock.name.toLowerCase().indexOf(search.toLocaleLowerCase()) !== -1
   );
   return (
     <Col lg={4} className="mt-4">
