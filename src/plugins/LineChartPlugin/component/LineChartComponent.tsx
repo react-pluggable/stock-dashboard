@@ -3,6 +3,11 @@ import React, { useContext } from "react";
 import { Chart } from "react-charts";
 import { StockContext } from "../../../App";
 
+type Coordinate = {
+  x: Date;
+  y: number;
+};
+
 function LineChartComponent() {
   const stocksData = useContext(StockContext);
 
@@ -11,7 +16,7 @@ function LineChartComponent() {
   );
 
   let labelData = stock.data;
-  let coordinates = new Array();
+  let coordinates: Array<Coordinate> = [];
   labelData.forEach((obj) => {
     let parts = obj.date.split("-");
     let date = new Date(parts[0], parts[1] - 1, parts[2]);
@@ -22,23 +27,17 @@ function LineChartComponent() {
     });
   });
 
-  const data = React.useMemo(
-    () => [
-      {
-        label: stock.name,
-        data: coordinates,
-      },
-    ],
-    [stocksData]
-  );
+  const data = [
+    {
+      label: stock.name,
+      data: coordinates,
+    },
+  ];
 
-  const axes = React.useMemo(
-    () => [
-      { primary: true, type: "time", position: "bottom" },
-      { type: "linear", position: "left" },
-    ],
-    []
-  );
+  const axes = [
+    { primary: true, type: "time", position: "bottom" },
+    { type: "linear", position: "left" },
+  ];
 
   return (
     <div className="chart">
