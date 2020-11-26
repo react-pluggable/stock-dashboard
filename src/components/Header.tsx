@@ -10,7 +10,7 @@ export default function Header() {
           className="ml-3"
           style={{ fontSize: "30px" }}
         >
-          <span style={{ color: "grey" }}> &#128200;Sample </span>Stock
+          &#128200;&nbsp;<span style={{ color: "grey" }}> Sample </span>Stock
         </Navbar.Brand>
       </Navbar>
     </div>
